@@ -80,11 +80,6 @@ func getProverbs() ([]string, error) {
 	return clearProverb, nil
 }
 
-func closeConn(conn net.Conn) {
-	conn.Close()
-	fmt.Println("Соединение закрыто")
-}
-
 // Обработчик. Вызывается для каждого соединения.
 func handleConn(conn net.Conn, proverbs []string) {
 	// Закрытие соединения.
